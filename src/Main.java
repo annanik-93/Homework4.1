@@ -43,17 +43,15 @@ public class Main {
         }
 
         int age2 = 10;
-        boolean hasAdult = true; // true — взрослый есть, false — взрослого нет
+        boolean hasAdult = true;
         System.out.println();
         System.out.println("Задание №5");
         if (age2 < 5) {
-            System.out.println("Если возраст ребенка равен" + age2 + ", то ему нельзя кататься на аттракционе");
-        } else if (age2 >= 5 && age2 < 14) {
-            if (hasAdult) {
-                System.out.println("Если возраст ребенка равен " + age2 + ", то ему можно кататься на аттракционе в сопровождении взрослого");
-            } else {
-                System.out.println("Если возраст ребенка равен " + age2 + ", то ему нельзя кататься на аттракционе (нужно сопровождение)");
-            }
+            System.out.println("Если возраст ребенка равен " + age2 + ", то ему нельзя кататься на аттракционе");
+        } else if (age2 >= 5 && age2 < 14 && hasAdult) {
+            System.out.println("Если возраст ребенка равен " + age2 + ", то ему можно кататься на аттракционе в сопровождении взрослого");
+        } else if (age2 >= 5 && age2 < 14 && !hasAdult) {
+            System.out.println("Если возраст ребенка равен " + age2 + ", то ему нельзя кататься на аттракционе (нужно сопровождение)");
         } else {
             System.out.println("Если возраст ребенка равен " + age2 + ", то ему можно кататься на аттракционе без сопровождения взрослого");
         }
@@ -65,19 +63,18 @@ public class Main {
         System.out.println("Задание №6");
         if (passengersCount >= totalCapacity) {
             System.out.println("Вагон уже полностью забит.");
-        } else {
-            if (passengersCount < seatingCapacity) {
+        } else if (passengersCount < seatingCapacity) {
                 System.out.println("В вагоне есть сидячие места.");
             } else {
                 System.out.println("В вагоне остались только стоячие места.");
             }
-        }
+
 
         int one = 9;
         int two = 47;
         int three = 19;
         System.out.println();
-        System.out.println("Задание №7");
+        System.out.println("Задание №6");
         if (one >= two && one >= three) {
             System.out.println("Большее число — " + one);
         } else if (two >= one && two >= three) {
